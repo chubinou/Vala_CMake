@@ -136,7 +136,7 @@ function(vala_precompile output)
         get_filename_component(abs_src ${src} ABSOLUTE)
         get_filename_component(name_src ${src} NAME)
 
-        file(RELATIVE_PATH rel_src ${CMAKE_SOURCE_DIR} ${abs_src})
+	file(RELATIVE_PATH rel_src ${CMAKE_CURRENT_SOURCE_DIR} ${abs_src})
         get_filename_component(rel_dir ${rel_src} DIRECTORY)
         string(REPLACE ".vala" ".c" name_src ${name_src})
         string(REPLACE ".gs" ".c" name_src ${name_src})
